@@ -25,6 +25,21 @@
                     <mainClass>org.example.Main</mainClass>
                 </configuration>
             </plugin>
+
+            <!-- Add this plugin to set the Main-Class attribute in the JAR manifest -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <version>3.1.0</version>
+                <configuration>
+                    <archive>
+                        <manifest>
+                            <mainClass>org.example.Main</mainClass>
+                        </manifest>
+                    </archive>
+                </configuration>
+            </plugin>
         </plugins>
     </build>
+
 </project>
